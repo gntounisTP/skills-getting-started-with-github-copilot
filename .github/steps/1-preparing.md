@@ -14,13 +14,9 @@ GitHub Copilot has been proven to increase developer productivity and accelerate
 
 ### :keyboard: Activity: Getting to know basic Copilot features :robot:
 
-1. Right-click the below button to open the **Create Codespace** page in a new tab.
+1. Right-click the below button to open the **Create Codespace** page in a new tab. Use the default configuration.
 
    [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/{{full_repo_name}}?quickstart=1)
-
-   - The free tier of Codespaces that comes with all GitHub accounts is fine, assuming you still have minutes available.
-   - The default Codespace settings are fine.
-   - This repository will provide the additional settings and files for making your extension.
 
 1. Confirm the **Repository** field is your copy of the exercise, not the original, then click the green **Create Codespace** button.
 
@@ -31,18 +27,29 @@ GitHub Copilot has been proven to increase developer productivity and accelerate
 
 1. Click the extensions sidebar tab and verify that `GitHub Copilot` extension is installed.
 
-   <!-- TODO: Add screenshot -->
+   ![image](https://github.com/user-attachments/assets/c1ddca93-723d-4c62-a309-5944e5dfc6f4)
+
 
 1. Search for the Copilot Icon on the top right section of your editor.
-   Open up Copilot Chat and ask Copilot to introduce you to the project, to do that type `/explain` in the Chat Window.
-   <!-- TODO: Add screenshot -->
-1. Run the project by using  `Run and Debug` section in the left sidebar of VS Code. Then head to the ports tab and open the application available on port 8000
+   Open up Copilot Chat and ask Copilot to introduce you to the project.
 
-   <!-- TODO: Add screenshot -->
+   ```txt
+   @workspace Briefly explain the structure of the codebase in this repository.
+   ```
+
+1. Run the project by using  `Run and Debug` section in the left sidebar of VS Code.
+
+   <img width="300" alt="image" src="https://github.com/user-attachments/assets/50b27f2a-5eab-4827-9343-ab5bce62357e" />
+
+
+1. Then head to the ports tab and open the application available on port `8000`
+
+  ![image](https://github.com/user-attachments/assets/92d5642e-ce99-4a66-850c-2d311a673596)
+
 
 1. Great! Now that you know what we will be working with, let's have your first interaction with Copilot.
 
-   Open up a terminal in VS Code so you won't interrupt the debug session you just started.
+   Open up a terminal a new terminal window in VS Code so you won't interrupt the debug session you just started in the current one.
 
    Next, `Right click` within the newly created terminal window, then click `Copilot` => `Terminal Inline Chat`.
 

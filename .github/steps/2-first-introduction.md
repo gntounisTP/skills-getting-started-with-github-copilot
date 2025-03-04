@@ -26,6 +26,30 @@ There are many Copilot Features and interaction modes. In this step you will get
 
    Press `Tab` to accept your first Copilot suggestion :tada: :robot:
 
+
+   <details>
+   <summary>Example suggestion</summary><br/>
+
+   ```python
+   @app.post("/activities/{activity_name}/signup")
+   def signup_for_activity(activity_name: str, email: str):
+      """Sign up a student for an activity"""
+      # Validate activity exists
+      if activity_name not in activities:
+         raise HTTPException(status_code=404, detail="Activity not found")
+
+      # Validate student is not already signed
+      if email in activities[activity_name]["participants"]:
+         raise HTTPException(status_code=400, detail="Student is already signed up")
+      
+      activity = activities[activity_name]
+
+      # Add student
+      activity["participants"].append(email)
+      return {"message": f"Signed up {email} for {activity_name}"}
+   ```
+   </details>
+
    > **TIP**: If you would like to see other suggestions, instead of pressing `Tab`, hover over the suggestion and a small panel will show up. On it's right side click the three dots `...` and select `Open Completions Panel`
 
 
@@ -36,6 +60,7 @@ There are many Copilot Features and interaction modes. In this step you will get
    ```
 
    On the bottom part of Copilot Chat you can choose what AI Model Copilot should use. Different models can provide different results.
+   ![image](https://github.com/user-attachments/assets/2668c5f8-1f28-4361-bf07-0b67d6a4e7c4)
 
 1. You can use Copilot Chat inline to stay in the flow. It's often used when you are dealing with problems or want to understand a specific part of the code.
 
@@ -53,6 +78,9 @@ There are many Copilot Features and interaction modes. In this step you will get
    1. Click the `+` sign next to  `app.py` file to stage your changes.
    1. On the right side of the commit message window click :sparkles: to generate commit message with copilot
    1. Commit and sync your changes with the automatically generated message
+
+   ![image](https://github.com/user-attachments/assets/7d3daf4e-4125-4775-88a7-33251cd7293e)
+
 
 1. Wait a moment for the bot to check your work. You will see a comment with progress info and the next lesson.
 
