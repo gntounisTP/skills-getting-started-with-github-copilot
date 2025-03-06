@@ -1,78 +1,90 @@
-## Step 3: GitHub Copilot Edits
+## Step 3: Getting work done even _faster_ with Copilot Edits
 
- [Copilot Edits](https://code.visualstudio.com/docs/copilot/copilot-edits) works as an AI-powered code editing session to make changes across multiple files using natural language.
+In our previous steps, we used features of Copilot that require more hands-on guidance and produced single isolated results. Now, we will explore a Copilot feature that works more holistically on our repo.
 
- Copilot Edits applies the edits directly in the editor, where you can review them in-place, with the full context of the surrounding code.
+[Copilot Edits](https://code.visualstudio.com/docs/copilot/copilot-edits) works is an AI-powered code editing session to make changes across **multiple files** using natural language, and applies the edits directly in the editor, where you can review them in-place, with the full context of the surrounding code.
 
-**Key features:**
+#### Key features
 
 - **Multi-file Editing**: Copilot Edits can make changes across multiple files in your workspace.
 - **Iterative Workflow**: Designed for fast iteration, allowing you to review, accept, or discard AI-generated code.
 - **In-place Edits**: Shows generated code directly in your editor, providing a code review-like flow.
 - **Working Set**: Allows you to define which files the edits should be applied to.
 
+#### How it works
 
-**How it works:**
+1. **Set Context**: Select files to be in the working set.
+1. **Provide Instructions**: Use natural language to describe the required changes.
+1. **Review Changes**: See proposed changes in-place in your code.
+1. **Accept or Discard**: Review each suggested edit and choose which to keep.
+1. **Iterate**: If needed, provide follow-up instructions to refine the changes.
 
-- **Set Context**: Define the working set by selecting files.
-- **Provide Instructions**: Use natural language to tell Copilot what changes you need.
-- **Review Changes**: See proposed changes in-place in your code
-- **Accept or Discard**: Review each AI-generated edit and choose which changes to keep
-- **Iterate**: Provide follow-up instructions and refine the changes as needed
+### :keyboard: Activity: Use Copilot to add a new feature! :rocket:
 
-### :keyboard: Activity: Let's add a feature!
+1. If the Copilot Chat panel is not visible, please reopen it.
 
-1. In the top left part of Copilot Chat window, switch to Copilot Edits.
+1. In the top left part of Copilot Chat window, click the **Copilot Edits** icon to switch modes.
 
- ![image](https://github.com/user-attachments/assets/0b17c5bd-d03b-41b1-b97d-624fcbf8ccd1)
+   <img width="200" alt="image" src="https://github.com/user-attachments/assets/0b17c5bd-d03b-41b1-b97d-624fcbf8ccd1" />
 
-1. Add the following files to the working set. Use the attach button in the bottom left corner of Copilot Edits view.
-    - `src/static/app.js`
-    - `src/static/index.html`
-    - `src/static/styles.css`
-1. Ask Copilot to add a new feature to the website.
+1. Open the files related to our webpage then drag each editor window (or file) to the chat panel, informing Copilot to use them as context.
 
-    ```txt
-    Hey Copilot. Edit the area where activities are listed on the website to show what participants are already signed for that activity.
-    ```
+   - `src/static/app.js`
+   - `src/static/index.html`
+   - `src/static/styles.css`
 
-    Copilot will generate inline edits for you. You can accept them or if this wasn't what you were hoping for, provide Copilot additional instructions.
+   > **Tip:** You can also use the **Attach files...** button to provide other sources of context items, like a GitHub issue, the entire codebase, or the results of a terminal window.
 
-    > **TIP:** On the bottom part of Copilot Edits you can choose what AI Model Copilot should use. Different models can provide different results.
+1. Ask Copilot to display the current participants. Wait a moment for the suggestions to arrive and be applied.
+
+   ```txt
+   Hey Copilot, can you please edit the area where activities are listed on the website to show what participants are already signed up for that activity.
+   ```
+
+   - An extra icon has appeared next to the file names and open editor windows indicating they have been temporarily modified.
+   - A suggested edits panel has appeared in the bottom right of the editor window providing controls to jump to the recommended changes.
+
+      <img width="200" alt="files with icons indicating they have been edited" src="https://github.com/user-attachments/assets/9c7c2e10-cd18-43c5-9947-cffd6dde0473" />
+
+      <img width="250" alt="edit navigation panel" src="https://github.com/user-attachments/assets/a84965a5-2f43-4c93-a814-0fdeb3a06494" />
 
    <details>
-   <summary>Having trouble? 🤷</summary><br/>
+   <summary>Need help? 🤷</summary><br/>
 
    Remember, to add the relevant files to the working set.
-    
-    
+
    ![image](https://github.com/user-attachments/assets/bdd7318b-50e3-46d0-88ce-7615f45ce334)
 
-    
    </details>
 
-1. Head back to the website and see your changes!
-    <details>
-   <summary>Having trouble? 🤷</summary><br/>
+1. Before we simply accept the changes, please check our website again and verify everything is updated as expected. Here is an example of an updated activity card.
 
-    Remember, you can access the website url from the `ports` tab.
-
-    If the website is not available, check that it is still running. You can run in through the left sidebar's `Run and Debug` section.
-
-   </details>
-
-1. Commit and push the changes.
-1. Head back to your repository on github.com and open up a pull request to the `main` branch.
-   <!-- TODO: Add link -->
-
-1. Wait a moment for the bot to check your work. You will see a comment with progress info and the next lesson.
+   <img width="350" alt="Activity card with participant info" src="https://github.com/user-attachments/assets/59fe792e-d587-487d-8525-2548ac0a7adf" />
 
    <details>
-   <summary>Having trouble? 🤷</summary><br/>
+   <summary>Need help? 🤷</summary><br/>
+   If the website is not loading, here are some things to check.
 
-   If you don't get feedback, here are some things to check:
-
-   - Make sure your pushed the changes in the `src/static/` directory to the branch `accelerate-with-copilot`.
-   - Make sure you opened a pull request to the `main` branch
+   - Restart the VS Code Debugger to make sure the latest version of the website is served.
+   - If you forgot the url, or closed the window, please review step 1.
+   - Try hard refreshing the webpage or opening in a private window so it downloads a fresh copy.
 
    </details>
+
+1. Now that we have confirmed our changes are good, use the panel to cycle through each suggested edit and press **Keep** to apply the change.
+
+   > **Tip:** You can accept the changes directly, modify them, or provide additional instruction to refine them using the chat interface.
+
+1. With our new feature complete, please **commit** and **push** the changes to GitHub.
+
+1. Wait a moment for Mona to check your work, provide feedback, and share the the final lesson. Almost done!
+
+<details>
+<summary>Having trouble? 🤷</summary><br/>
+
+If you don't get feedback, here are some things to check:
+
+- Make sure your pushed the changes in the `src/static/` directory to the branch `accelerate-with-copilot`.
+- Make sure you opened a pull request to the `main` branch
+
+</details>

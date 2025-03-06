@@ -1,34 +1,53 @@
-## Step 2: First interaction with Copilot
+## Step 2: Getting work done with Copilot
 
-There are many Copilot Features and interaction modes. In this step you will get to use some of them:
+In the previous step, we Copilot was able to help us onboard to the project. That alone is a huge time save, but now let's get some work done!
 
-- **Code completions**: As you type, Copilot suggests code completions directly in your editor. Can generate entire functions based on comments or existing code context.
-- **Copilot Chat**: A chat interface that lets you ask coding-related questions. You will see different modes in which you can use Copilot chat
+We recently learned there is a bug where students are registering for the same activites twice. That simply isn't acceptable, so let's get it fixed!
 
-> [!NOTE]
-> You can see see all currently available GitHub Copilot features that are live or in preview in the documentation. See [GitHub Copilot Features](https://docs.github.com/en/copilot/about-github-copilot/github-copilot-features)
+Unfortunately, we were given little information to solve this problem. Let's enlist Copilot to help find the problem area and get a potential solution made.
 
-**What is context?**: GitHub Copilot context refers to comments or existing code that Copilot uses to understand your intent and generate relevant code suggestions.
+But before we do that, let's learn a bit more about Copilot.
 
-### :keyboard: Activity: Getting to know basic Copilot features :robot:
+### How does Copilot work?
 
-1. Open `src/app.py` file and let's start working on improving our High School API :robot:!.
+In short, you can think of Copilot like a very focused coworker. To be effective with them, you need to provide them background (context) and clear direction (prompts). Additionally, different people are better at different things because of their unique experiences (models).
 
-   To start off - you will add additional validation to the `signup_for_activity` endpoint. Right now there is no logic to prevent users to sign to the same activity twice.
+- **How do we provide context?:** In our coding environment, Copilot will automatically consider nearby code and open tabs. If you are using chat, you can also explicitly refer to files.
 
-   Within the code of `signup_for_activity` endpoint, write a comment to provide Copilot context of what it is you are trying to do
+- **What model should we pick?:** For our exercise, it shouldn't matter too much. Experimenting with different models is part of the fun!
 
-   ```python
-   # Validate student is not already signed
+- **How do I make prompts?:** Being explicit and clear helps Copilot do the best job. But unlike some traditional systems, you can always clarify your direction with followup prompts.
+
+### :keyboard: Activity: Use Copilot to fix our registration bug :robot:
+
+1. Let's ask Copilot to suggest where our bug might be coming from. Open the Copilot Chat panel and ask the following.
+
+   ```text
+   @workspace Students are able to register twice for an activity. Where could this bug be coming from?
    ```
 
-   Then press `Enter` to go to newline and Copilot will provide you with autocompletion suggestions!
+1. Now that we know the issue is in the `src/appy.py` file and the `signup_for_activity` method, let's go fix it (semi-manually). We'll start with a comment and let Copilot finish the correction.
 
-   Press `Tab` to accept your first Copilot suggestion :tada: :robot:
+   1. In VS Code, select the **Navigation** tab to show the project files and open the `src/app.py` file.
 
+   1. Scroll near the bottom of the file and find the `signup_for_activity` method.
+
+   1. Find the comment line that describes adding a student. Above this is where it seems logical to do our registration check.
+
+   1. Enter the below comment and press enter to go to the next line. After a moment, temporary shadow text will appear with a suggestion from Copilot! Nice! :tada:
+
+      ```python
+      # Validate student is not already signed up
+      ```
+
+   1. Press `Tab` to accept Copilot's suggestion and convert the shadow text to code.
+
+      > **Tip:** If you would like to see other suggestions, instead of pressing `Tab`, hover over the shadow text suggestion and a toolbar will appear. Use the arrows to select other suggestions or the three dots `...` and `Open Completions Panel` option to show all suggestions in a dedicated panel.
 
    <details>
-   <summary>Example suggestion</summary><br/>
+   <summary>Example Results</summary><br/>
+
+   Copilot is growing every day and may not always produce the same results. If you are unhappy with the suggestions, here is an example of a valid suggestion result we produced during the making of this exercise. You can use it to continue forward.
 
    ```python
    @app.post("/activities/{activity_name}/signup")
@@ -38,31 +57,114 @@ There are many Copilot Features and interaction modes. In this step you will get
       if activity_name not in activities:
          raise HTTPException(status_code=404, detail="Activity not found")
 
-      # Validate student is not already signed
-      if email in activities[activity_name]["participants"]:
-         raise HTTPException(status_code=400, detail="Student is already signed up")
-      
+      # Get the activity
       activity = activities[activity_name]
+
+      # Validate student is not already signed up
+      if email in activity["participants"]:
+        raise HTTPException(status_code=400, detail="Student is already signed up")
 
       # Add student
       activity["participants"].append(email)
       return {"message": f"Signed up {email} for {activity_name}"}
    ```
+
    </details>
 
-   > **TIP**: If you would like to see other suggestions, instead of pressing `Tab`, hover over the suggestion and a small panel will show up. On it's right side click the three dots `...` and select `Open Completions Panel`
+### :keyboard: Activity: Let Copilot generate sample data :robot:
 
+In new project developments, it's often helpful to have some realistic looking fake data for testing. Copilot is excellent at this task, so let's add some more sample activities and introduce our next interface: **Inline Chat**
 
-1. Open up Copilot Chat window and ask Copilot to help you create a completely new endpoint to the API
+> [!TIP]  
+> **Inline Chat** and the **Copilot Chat** panel are very similar tools, but with slightly different automatic context.
+> As such, while Copilot Chat is good at explaining about the project, inline chat might feel more natural for asking about a particular line or function.
 
-   ```txt
-   Hey Copilot! Create a endpoint that will allow students to sign themselves out from an activity
+1. If not already ready, open the `src/app.py` file.
+
+1. Near the top (about line 23), find the `activities` variable, where our example extracurricular activies are configured.
+
+1. Open the inline Copilot chat by Right-clicking on any of the related lines and selecting **Copilt** and **Editor Inline Chat**.
+
+   > **Tip:** You can also use the keyboard command `Ctrl + I` (windows) or `Cmd + I` (mac).
+
+1. Enter the following prompt text and press the **Send and Dispatch** button.
+
+   ```text
+   Add 2 more sports related activities, 2 more artistic activities, and 2 more intellectual activities.
    ```
 
-   On the bottom part of Copilot Chat you can choose what AI Model Copilot should use. Different models can provide different results.
-   ![image](https://github.com/user-attachments/assets/2668c5f8-1f28-4361-bf07-0b67d6a4e7c4)
+1. After a moment, Copilot will directly start making changes do the code. The changes will be stylized differently to make any additions and removals easy to identify. Take a moment to inspect and then press the **Accept** button.
 
-1. You can use Copilot Chat inline to stay in the flow. It's often used when you are dealing with problems or want to understand a specific part of the code.
+   <!-- Insert picture of diff view here -->
+
+<details>
+<summary>Example Results</summary><br/>
+
+Copilot is growing every day and may not always produce the same results. If you are unhappy with the suggestions, here is an example result we produced during the making of this exercise. You can use it to continue forward, if having trouble.
+
+```python
+# In-memory activity database
+activities = {
+   "Chess Club": {
+      "description": "Learn strategies and compete in chess tournaments",
+      "schedule": "Fridays, 3:30 PM - 5:00 PM",
+      "max_participants": 12,
+      "participants": ["michael@mergington.edu", "daniel@mergington.edu"]
+   },
+   "Programming Class": {
+      "description": "Learn programming fundamentals and build software projects",
+      "schedule": "Tuesdays and Thursdays, 3:30 PM - 4:30 PM",
+      "max_participants": 20,
+      "participants": ["emma@mergington.edu", "sophia@mergington.edu"]
+   },
+   "Gym Class": {
+      "description": "Physical education and sports activities",
+      "schedule": "Mondays, Wednesdays, Fridays, 2:00 PM - 3:00 PM",
+      "max_participants": 30,
+      "participants": ["john@mergington.edu", "olivia@mergington.edu"]
+   },
+   "Basketball Team": {
+      "description": "Competitive basketball training and games",
+      "schedule": "Tuesdays and Thursdays, 4:00 PM - 6:00 PM",
+      "max_participants": 15,
+      "participants": []
+   },
+   "Swimming Club": {
+      "description": "Swimming training and water sports",
+      "schedule": "Mondays and Wednesdays, 3:30 PM - 5:00 PM",
+      "max_participants": 20,
+      "participants": []
+   },
+   "Art Studio": {
+      "description": "Express creativity through painting and drawing",
+      "schedule": "Wednesdays, 3:30 PM - 5:00 PM",
+      "max_participants": 15,
+      "participants": []
+   },
+   "Drama Club": {
+      "description": "Theater arts and performance training",
+      "schedule": "Tuesdays, 4:00 PM - 6:00 PM",
+      "max_participants": 25,
+      "participants": []
+   },
+   "Debate Team": {
+      "description": "Learn public speaking and argumentation skills",
+      "schedule": "Thursdays, 3:30 PM - 5:00 PM",
+      "max_participants": 16,
+      "participants": []
+   },
+   "Science Club": {
+      "description": "Hands-on experiments and scientific exploration",
+      "schedule": "Fridays, 3:30 PM - 5:00 PM",
+      "max_participants": 20,
+      "participants": []
+   }
+}
+```
+
+</details>
+
+<!-- 1. You can use Copilot Chat inline to stay in the flow. It's often used when you are dealing with problems or want to understand a specific part of the code.
 
    Hold down left button of your mouse and select this part of the file.
 
@@ -72,23 +174,44 @@ There are many Copilot Features and interaction modes. In this step you will get
           "static")), name="static")
    ```
 
-   Then `Right click` =>`Copilot` => `Editor Inline Chat` and use the `/explain` function.
+   Then `Right click` =>`Copilot` => `Editor Inline Chat` and use the `/explain` function. -->
 
-1. In the `Source Control` section on the left sidebar of VS Code.
-   1. Click the `+` sign next to  `app.py` file to stage your changes.
-   1. On the right side of the commit message window click :sparkles: to generate commit message with copilot
-   1. Commit and sync your changes with the automatically generated message
+<!-- 1. Open up Copilot Chat window and ask Copilot to help you create a completely new endpoint to the API
+
+   ```txt
+   Hey Copilot! Create a endpoint that will allow students to sign themselves out from an activity
+   ```
+
+   On the bottom part of Copilot Chat you can choose what AI Model Copilot should use. Different models can provide different results.
+   ![image](https://github.com/user-attachments/assets/2668c5f8-1f28-4361-bf07-0b67d6a4e7c4) -->
+
+### :keyboard: Activity: Use Copilot to describe our work :robot:
+
+Nice work fixing that bug and expanding the example activities! Now let's get our work committed and pushed to GitHub, again with the help of Copilot!
+
+1. In the left sidebar, select the `Source Control` tab.
+
+   > **Tip:** Opening a file from the source control area will show the differences to the original rather than simply opening it.
+
+1. Find the `app.py` file and press the `+` sign to collect your changes together in the staging area.
 
    ![image](https://github.com/user-attachments/assets/7d3daf4e-4125-4775-88a7-33251cd7293e)
 
+1. Above the list of staged changes, find the **Message** text box, but **don't enter anything** for now.
 
-1. Wait a moment for the bot to check your work. You will see a comment with progress info and the next lesson.
+   - Typically, you would write a short description of the changes here. But now we have Copilot!
 
-   <details>
-   <summary>Having trouble? 🤷</summary><br/>
+1. To the right of the **Message** text box, find and click the **Generate Commit Message with Copilot** button (:sparkles: icon).
 
-   If you don't get feedback, here are some things to check:
+1. Press the **Commit** button and **Sync Changes** button push your chagnes to GitHub.
 
-   - Make sure your pushed the `src/app.py` file changes to the branch `accelerate-with-copilot`.
+1. Wait a moment for Mona to check your work, provide feedback, and share the next lesson.
 
-   </details>
+<details>
+<summary>Having trouble? 🤷</summary><br/>
+
+If you don't get feedback, here are some things to check:
+
+- Make sure your pushed the `src/app.py` file changes to the branch `accelerate-with-copilot`.
+
+</details>

@@ -7,19 +7,19 @@ _Congratulations, you've completed this exercise and learned a lot about GitHub 
 Here's a recap of your accomplishments:
 
 - Set up your GitHub Codespace and environment.
-- Learned how to use Copilot Autosuggestions, Chat and Edits.
-- Used Copilot to generate commit messages and pull request summaries
-- Learned how to request Copilot to review your code
+- Learned how to use Copilot inline suggestions, Chat and Edits.
+- Used Copilot to generate commit messages and pull request summaries.
+- Learned how to request Copilot to review your code.
 
 ### What's next?
 
 - Continue working on the project
+  - Use Copilot to add a function for students to unregister for an activity.
   - Use Copilot to fix issues found by GitHub Copilot in pull request review
-  - Use Copilot to generate tests and documentation
-  - Try using different AI Models
+  - Use Copilot to generate tests and documentation.
+  - Try using different models.
 - Check out the other [GitHub Skills exercises](https://skills.github.com).
   - Try building your first [GitHub Copilot Extension](https://github.com/skills/your-first-extension-for-github-copilot)
-
 
 Check out these resources to learn more about GitHub Copilot :
 - Are you not getting the responses you want from Copilot? [Learn prompt engineering](https://docs.github.com/en/copilot/using-github-copilot/copilot-chat/prompt-engineering-for-copilot-chat)
