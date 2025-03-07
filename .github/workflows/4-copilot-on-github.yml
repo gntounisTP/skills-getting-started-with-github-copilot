@@ -78,10 +78,11 @@ jobs:
       - name: Update comment - step finished
         run: |
           gh issue comment "$ISSUE_URL" \
-            --body "${{ steps.build-message-step-finish.outputs.updated-text }}" \
+            --body "$ISSUE_BODY" \
             --edit-last
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUE_BODY: ${{ steps.build-message-step-finish.outputs.updated-text }}
 
   post_review_content:
     name: Post review content
@@ -165,9 +166,10 @@ jobs:
       - name: Create comment - exercise finished
         run: |
           gh issue comment "$ISSUE_URL" \
-            --body "${{ steps.build-finish-message.outputs.updated-text }}"
+            --body "$ISSUE_BODY"
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUE_BODY: ${{ steps.build-finish-message.outputs.updated-text }}
 
       - name: Close issue
         run: gh issue close "$ISSUE_URL"
