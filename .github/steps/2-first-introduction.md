@@ -1,12 +1,12 @@
 ## Step 2: Getting work done with Copilot
 
-In the previous step, we Copilot was able to help us onboard to the project. That alone is a huge time save, but now let's get some work done!
+In the previous step, we Copilot was able to help us onboard to the project. That alone is a huge time saver, but now let's get some work done!
 
 We recently learned there is a bug where students are registering for the same activites twice. That simply isn't acceptable, so let's get it fixed!
 
-Unfortunately, we were given little information to solve this problem. Let's enlist Copilot to help find the problem area and get a potential solution made.
+Unfortunately, we were given little information to solve this problem. So, let's enlist Copilot to help find the problem area and get a potential solution made.
 
-But before we do that, let's learn a bit more about Copilot.
+But before we do that, let's learn a bit more about Copilot! 🧑‍🚀
 
 ### How does Copilot work?
 
@@ -14,11 +14,11 @@ In short, you can think of Copilot like a very focused coworker. To be effective
 
 - **How do we provide context?:** In our coding environment, Copilot will automatically consider nearby code and open tabs. If you are using chat, you can also explicitly refer to files.
 
-- **What model should we pick?:** For our exercise, it shouldn't matter too much. Experimenting with different models is part of the fun!
+- **What model should we pick?:** For our exercise, it shouldn't matter too much. Experimenting with different models is part of the fun! That's another lesson! 🤖
 
 - **How do I make prompts?:** Being explicit and clear helps Copilot do the best job. But unlike some traditional systems, you can always clarify your direction with followup prompts.
 
-### :keyboard: Activity: Use Copilot to fix our registration bug :robot:
+### :keyboard: Activity: Use Copilot to fix our registration bug :bug:
 
 1. Let's ask Copilot to suggest where our bug might be coming from. Open the Copilot Chat panel and ask the following.
 
@@ -73,29 +73,26 @@ In short, you can think of Copilot like a very focused coworker. To be effective
 
 ### :keyboard: Activity: Let Copilot generate sample data :robot:
 
-In new project developments, it's often helpful to have some realistic looking fake data for testing. Copilot is excellent at this task, so let's add some more sample activities and introduce our next interface: **Inline Chat**
+In new project developments, it's often helpful to have some realistic looking fake data for testing. Copilot is excellent at this task, so let's add some more sample activities and introduce another way to interact with Copilot: **Inline Chat**
 
 > [!TIP]  
-> **Inline Chat** and the **Copilot Chat** panel are very similar tools, but with slightly different automatic context.
-> As such, while Copilot Chat is good at explaining about the project, inline chat might feel more natural for asking about a particular line or function.
+> **Inline Chat** and the **Copilot Chat** panel are very similar tools, but with slightly different automatic context. As such, while Copilot Chat is good at explaining about the project, inline chat might feel more natural for asking about a particular line or function.
 
-1. If not already ready, open the `src/app.py` file.
+1. If not already open, open the `src/app.py` file.
 
 1. Near the top (about line 23), find the `activities` variable, where our example extracurricular activies are configured.
 
-1. Open the inline Copilot chat by Right-clicking on any of the related lines and selecting **Copilt** and **Editor Inline Chat**.
+1. Open Copilot inline chat by right-clicking on any of the related lines and selecting **Copilot** and **Editor Inline Chat**.
 
    > **Tip:** You can also use the keyboard command `Ctrl + I` (windows) or `Cmd + I` (mac).
 
-1. Enter the following prompt text and press the **Send and Dispatch** button.
+1. Enter the following prompt text and press enter or the **Send and Dispatch** button.
 
    ```text
    Add 2 more sports related activities, 2 more artistic activities, and 2 more intellectual activities.
    ```
 
-1. After a moment, Copilot will directly start making changes do the code. The changes will be stylized differently to make any additions and removals easy to identify. Take a moment to inspect and then press the **Accept** button.
-
-   <!-- Insert picture of diff view here -->
+1. After a moment, Copilot will directly start making changes to the code. The changes will be stylized differently to make any additions and removals easy to identify. Take a moment to inspect and then press the **Accept** button.
 
 <details>
 <summary>Example Results</summary><br/>
@@ -164,27 +161,6 @@ activities = {
 
 </details>
 
-<!-- 1. You can use Copilot Chat inline to stay in the flow. It's often used when you are dealing with problems or want to understand a specific part of the code.
-
-   Hold down left button of your mouse and select this part of the file.
-
-   ```python
-   current_dir = Path(__file__).parent
-   app.mount("/static", StaticFiles(directory=os.path.join(Path(__file__).parent,
-          "static")), name="static")
-   ```
-
-   Then `Right click` =>`Copilot` => `Editor Inline Chat` and use the `/explain` function. -->
-
-<!-- 1. Open up Copilot Chat window and ask Copilot to help you create a completely new endpoint to the API
-
-   ```txt
-   Hey Copilot! Create a endpoint that will allow students to sign themselves out from an activity
-   ```
-
-   On the bottom part of Copilot Chat you can choose what AI Model Copilot should use. Different models can provide different results.
-   ![image](https://github.com/user-attachments/assets/2668c5f8-1f28-4361-bf07-0b67d6a4e7c4) -->
-
 ### :keyboard: Activity: Use Copilot to describe our work :robot:
 
 Nice work fixing that bug and expanding the example activities! Now let's get our work committed and pushed to GitHub, again with the help of Copilot!
@@ -199,9 +175,9 @@ Nice work fixing that bug and expanding the example activities! Now let's get ou
 
 1. Above the list of staged changes, find the **Message** text box, but **don't enter anything** for now.
 
-   - Typically, you would write a short description of the changes here. But now we have Copilot!
+   - Typically, you would write a short description of the changes here, but now we have Copilot to help out!
 
-1. To the right of the **Message** text box, find and click the **Generate Commit Message with Copilot** button (:sparkles: icon).
+1. To the right of the **Message** text box, find and click the **Generate Commit Message with Copilot** button (sparkles icon).
 
 1. Press the **Commit** button and **Sync Changes** button push your chagnes to GitHub.
 

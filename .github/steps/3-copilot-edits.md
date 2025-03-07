@@ -1,8 +1,8 @@
 ## Step 3: Getting work done even _faster_ with Copilot Edits
 
-In our previous steps, we used features of Copilot that require more hands-on guidance and produced single isolated results. Now, we will explore a Copilot feature that works more holistically on our repo.
+In our previous steps, we used features of Copilot that require more hands-on guidance and they produced mostly localized results. Now, we will explore Copilot Edits, a feature that allows working more holistically on our repo.
 
-[Copilot Edits](https://code.visualstudio.com/docs/copilot/copilot-edits) works is an AI-powered code editing session to make changes across **multiple files** using natural language, and applies the edits directly in the editor, where you can review them in-place, with the full context of the surrounding code.
+[Copilot Edits](https://code.visualstudio.com/docs/copilot/copilot-edits) is an AI-powered code editing session to make changes across **multiple files** using **natural language**, and applies the edits directly in the editor, where you can review them in-place, with the full context of the surrounding code.
 
 #### Key features
 
@@ -35,13 +35,13 @@ In our previous steps, we used features of Copilot that require more hands-on gu
 
    > **Tip:** You can also use the **Attach files...** button to provide other sources of context items, like a GitHub issue, the entire codebase, or the results of a terminal window.
 
-1. Ask Copilot to display the current participants. Wait a moment for the suggestions to arrive and be applied.
+1. Ask Copilot to update our project to display the current participants of activities. Wait a moment for the edit suggestions to arrive and be applied.
 
    ```txt
    Hey Copilot, can you please edit the area where activities are listed on the website to show what participants are already signed up for that activity.
    ```
 
-   - An extra icon has appeared next to the file names and open editor windows indicating they have been temporarily modified.
+   - An extra icon has appeared next to the file names and open editor windows indicating they have suggested edits.
    - A suggested edits panel has appeared in the bottom right of the editor window providing controls to jump to the recommended changes.
 
       <img width="200" alt="files with icons indicating they have been edited" src="https://github.com/user-attachments/assets/9c7c2e10-cd18-43c5-9947-cffd6dde0473" />
@@ -57,7 +57,7 @@ In our previous steps, we used features of Copilot that require more hands-on gu
 
    </details>
 
-1. Before we simply accept the changes, please check our website again and verify everything is updated as expected. Here is an example of an updated activity card.
+1. Before we simply accept the changes, please check our website again and verify everything is updated as expected. Here is an example of an updated activity card. **Important:** Your results may look slightly different!
 
    <img width="350" alt="Activity card with participant info" src="https://github.com/user-attachments/assets/59fe792e-d587-487d-8525-2548ac0a7adf" />
 
@@ -84,7 +84,7 @@ In our previous steps, we used features of Copilot that require more hands-on gu
 
 If you don't get feedback, here are some things to check:
 
-- Make sure your pushed the changes in the `src/static/` directory to the branch `accelerate-with-copilot`.
-- Make sure you opened a pull request to the `main` branch
+- Make sure your commite the changes in the `src/static/` directory to the branch `accelerate-with-copilot` and pushed/synchronized to GitHub.
+- If Mona found a mistake, simply make a correction and push your changes again. Mona will check your work as many times as needed.
 
 </details>
