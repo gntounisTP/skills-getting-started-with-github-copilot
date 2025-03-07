@@ -1,6 +1,6 @@
 ## Step 1: Hello Copilot
 
-Welcome to your **"Accelerate with GitHub Copilot"** exercise! :robot:
+Welcome to your **"Getting Started with GitHub Copilot"** exercise! :robot:
 
 In this exercise, you will be using different GitHub Copilot features to work on a website that allows students of Mergington High School to sign up for extracurricular activities. 🎻 ⚽️ ♟️
 
@@ -36,7 +36,7 @@ Let's start up our development environment, use copilot to learn a bit about the
 1. Confirm the **Repository** field is your copy of the exercise, not the original, then click the green **Create Codespace** button.
 
    - ✅ Your copy: `/{{{full_repo_name}}}`
-   - ❌ Original: `/skills/accelerate-with-copilot`
+   - ❌ Original: `/skills/getting-started-with-github-copilot`
 
 1. Wait a moment for Visual Studio Code to load in your browser.
 

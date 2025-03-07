@@ -1,4 +1,4 @@
-# Accelerate with GitHub Copilot
+# Getting Started with GitHub Copilot
 
 ![](../../actions/workflows/1-preparing.yml/badge.svg)
 ![](../../actions/workflows/2-first-introduction.yml/badge.svg)
@@ -25,7 +25,7 @@ In this exercise, you will:
 
 1. Right-click **Copy Exercise** and open the link in a new tab.
 
-   <a id="copy-exercise" href="https://github.com/new?template_owner=skills&template_name=accelerate-with-copilot&owner=%40me&name=skills-accelerate-with-copilot&description=Exercise:+Get+started+using+GitHub+Copilot&visibility=public">
+   <a id="copy-exercise" href="https://github.com/new?template_owner=skills&template_name=getting-started-with-github-copilot&owner=%40me&name=skills-getting-started-with-github-copilot&description=Exercise:+Get+started+using+GitHub+Copilot&visibility=public">
       <img src="https://img.shields.io/badge/📠_Copy_Exercise-008000" height="25pt"/>
    </a>
 
