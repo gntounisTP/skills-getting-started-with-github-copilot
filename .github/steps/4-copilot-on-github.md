@@ -20,10 +20,10 @@ Now, let's see how Copilot can help us finish up with during our pull request.
 
 1. Below the pull request description, press the green **Create pull request** one more time.
 
-1. Wait a moment Copilot to comment on your pull request!
+1. Wait a moment for Copilot to comment on your pull request!
 
    - Notice the log entry indicating a Copilot review was requested.
 
-1. At the bottom, press the green **Merge pull request** button.
+1. Back on the exercise issue, wait a moment for Mona to check your work, provide feedback, and post a final review of this lesson!
 
-1. Wait a moment for Mona to check your work, provide feedback, and post a final review of this lesson! Nice work you are done! :tada:
+1. At the bottom, press the green **Merge pull request** button. Nice work! You are all done! :tada:
