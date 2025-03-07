@@ -24,6 +24,6 @@ Now, let's see how Copilot can help us finish up with during our pull request.
 
    - Notice the log entry indicating a Copilot review was requested.
 
-1. At the bottom, press the **Green Merge pull request** button.
+1. At the bottom, press the green **Merge pull request** button.
 
 1. Wait a moment for Mona to check your work, provide feedback, and post a final review of this lesson! Nice work you are done! :tada:

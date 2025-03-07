@@ -12,7 +12,7 @@ permissions:
 
 env:
   EXERCISE_NAME: "Accelerate with GitHub Copilot"
-  INTRO_MESSAGE: "🎉 Welcome to the exciting world of GitHub Copilot! 🚀 In this exercise, you'll unlock the potential of this AI-powered coding assistant to accelerate your development process. Let's dive in and have some fun exploring the future of coding together! 💻✨"
+  INTRO_MESSAGE: "Welcome to the exciting world of GitHub Copilot! 🚀 In this exercise, you'll unlock the potential of this AI-powered coding assistant to accelerate your development process. Let's dive in and have some fun exploring the future of coding together! 💻✨"
   STEP_1_FILE: ".github/steps/1-preparing.md"
 
 jobs:

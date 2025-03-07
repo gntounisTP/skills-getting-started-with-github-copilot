@@ -67,6 +67,13 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+      # START: Check practical exercise
+
+      # Nothing to verify. Creating the branch is enough for now.
+      # In a future update, we will check that the codepsace is running and that the website is visible.
+
+      # END: Check practical exercise
+
       - name: Build message - step finished
         id: build-message-step-finish
         uses: skills/action-text-variables@v1

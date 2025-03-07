@@ -69,6 +69,50 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+      # START: Check practical exercise
+
+      # Search for the comment about registration validation
+      - name: Check contents of 'src/app.py'
+        run: |
+          # File and expected phrase
+          file="src/app.py"
+          keyphrase="Validate student is not already signed up"
+
+          # Fail the workflow if the file content is missing
+          if ! grep -q "$keyphrase" "$file"; then
+            message="It seems our registration validation bug has not been fixed. Please try again."
+            gh issue comment "$ISSUE_URL" \
+              --body "$message" \
+              --edit-last
+            exit 1
+          fi
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # Check the number of activities in the file by counting the json keys
+      - name: Check for additional student activities
+        run: |
+          # File and phrase to count
+          file="src/app.py"
+          keyphrase='"description":'
+          minimum_occurences=4
+
+          # Get the number of occurences of the keyphrase
+          found_occurences=$(grep -o "$keyphrase" "$file" | wc -l)
+
+          # If the number of occurences is less than the minimum, fail the workflow and send a message
+          if [ "$found_occurences" -lt "$minimum_occurences" ]; then
+            message="No new student activities were found. Please use Copilot to generate some and try again."
+            gh issue comment "$ISSUE_URL" \
+              --body "$message" \
+              --edit-last
+            exit 1
+          fi
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # END: Check practical exercise
+
       - name: Build message - step finished
         id: build-message-step-finish
         uses: skills/action-text-variables@v1
