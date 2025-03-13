@@ -37,9 +37,12 @@ In our previous steps, we used features of Copilot that require more hands-on gu
 
 1. Ask Copilot to update our project to display the current participants of activities. Wait a moment for the edit suggestions to arrive and be applied.
 
-   ```txt
-   Hey Copilot, can you please edit the area where activities are listed on the website to show what participants are already signed up for that activity.
-   ```
+   > <img width="13px" src="https://github.com/user-attachments/assets/98fd5d2e-ea29-4a4a-9212-c7050e177a69" /> **Prompt**
+   >
+   > ```prompt
+   > Hey Copilot, can you please edit the area where activities are
+   > listed on the website to show what participants are already signed up for that activity.
+   > ```
 
    - An extra icon has appeared next to the file names and open editor windows indicating they have suggested edits.
    - A suggested edits panel has appeared in the bottom right of the editor window providing controls to jump to the recommended changes.
@@ -57,9 +60,11 @@ In our previous steps, we used features of Copilot that require more hands-on gu
 
    </details>
 
-1. Before we simply accept the changes, please check our website again and verify everything is updated as expected. Here is an example of an updated activity card. **Important:** Your results may look slightly different!
+1. Before we simply accept the changes, please check our website again and verify everything is updated as expected. Here is an example of an updated activity card. You may need to restart the app or refresh the page.
 
    <img width="350" alt="Activity card with participant info" src="https://github.com/user-attachments/assets/59fe792e-d587-487d-8525-2548ac0a7adf" />
+
+   > **Note:** Your activity card may look different. Copilot won't always produce the same results.
 
    <details>
    <summary>Need help? 🤷</summary><br/>

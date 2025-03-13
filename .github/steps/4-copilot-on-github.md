@@ -1,6 +1,6 @@
 ## Step 4: Using GitHub Copilot within a pull request
 
-Congratulations! You are finished with coding for this exercise. Now it's time to merge our work. :tada: To wrap up, let's learn about two limited-access Copilot features that can speed up our pull requests!
+Congratulations! You are finished with coding for this exercise (and VS Code). Now it's time to merge our work. :tada: To wrap up, let's learn about two limited-access Copilot features that can speed up our pull requests!
 
 #### Copilot Pull Request Summaries
 
@@ -13,7 +13,7 @@ Typically, you would review your notes and commit messages then summarize them f
 
 More eyes on our work is always useful so let's ask Copilot to do a first pass before we do a normal peer review process. Copilot is great at catching common mistakes that can are fixed by simple adjustment, but please remember to use it responsibily.
 
-> [!IMPORTANT]  
+> [!NOTE]  
 > This is in **Public Preview** for organizations. [[docs]](https://docs.github.com/en/copilot/using-github-copilot/code-review/using-copilot-code-review)
 
 ### :keyboard: Activity: Summarize and review a PR with Copilot

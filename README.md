@@ -3,23 +3,26 @@
 ![](../../actions/workflows/1-preparing.yml/badge.svg)
 ![](../../actions/workflows/2-first-introduction.yml/badge.svg)
 ![](../../actions/workflows/3-copilot-edits.yml/badge.svg)
-![](../../actions/workflows/4-copilot-on-github.yml/badge.svg)
+![](../../actions/workflows/4a-copilot-on-github.yml/badge.svg)
 
 _Get started using GitHub Copilot in less than an hour._
 
 ## Welcome
 
-- **Who is this for**: Developers at any experience level that are looking to speed up their code workflow
-- **What you'll learn**: We'll introduce you to several GitHub Copilot features.
-- **What you'll build**: You will work on a simple Python API and a single static page.
-- **Prerequisites**: Basic programming skills.
+- **Who is this for**: Developers at any experience level looking to accelerate their code workflow.
+- **What you'll learn**: The different ways to interact with Copilot to explain, write, debug, and develop code.
+- **What you'll build**: You will guide Copilot to update Mergington High School's extracurricular activities website.
+- **Prerequisites**:
+  - Skills exercise: [Introduction to GitHub](https://github.com/skills/introduction-to-github)
+  - Familiarity with [VS Code](https://code.visualstudio.com/)
+  - Basic coding principles
 - **How long**: This exercise takes less than one hour to complete.
 
 In this exercise, you will:
 
-1. Use a preconfigured Codespace to run VS Code in your browser
-1. Learn different ways on how to use Copilot to accelerate your coding process
-1. Use Copilot to summarize and review your pull requests
+1. Use a preconfigured Codespace to run VS Code in your browser.
+1. Learn different interaction options to develop with GitHub Copilot.
+1. Use Copilot to summarize and review your pull request.
 
 ### How to start this exercise
 
@@ -35,10 +38,11 @@ In this exercise, you will:
    - We recommend creating a public repository, as private repositories will use [Actions minutes](https://docs.github.com/en/billing/managing-billing-for-github-actions/about-billing-for-github-actions).
    - Scroll down and click the **Create repository** button at the bottom of the form.
 
-3. After your new repository is created, wait about 20 seconds for the exercise to be prepared.
+3. After your new repository is created, wait about 20 seconds for the exercise to be prepared and buttons updated. You will continue working from your copy of the exercise.
 
    - The **Copy Exercise** button will deactivate, changing to gray.
    - The **Start Exercise** button will activate, changing to green.
+   - You will likely need to refresh the page.
 
 4. Click **Start Exercise**. Follow the step-by-step instructions and feedback will be provided as you progress.
 
