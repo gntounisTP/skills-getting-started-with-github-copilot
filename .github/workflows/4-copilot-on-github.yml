@@ -1,4 +1,4 @@
-name: Step 4a # Copilot on GitHub
+name: Step 4 # Copilot on GitHub
 
 on:
   pull_request:

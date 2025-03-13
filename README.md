@@ -3,7 +3,7 @@
 ![](../../actions/workflows/1-preparing.yml/badge.svg)
 ![](../../actions/workflows/2-first-introduction.yml/badge.svg)
 ![](../../actions/workflows/3-copilot-edits.yml/badge.svg)
-![](../../actions/workflows/4a-copilot-on-github.yml/badge.svg)
+![](../../actions/workflows/4-copilot-on-github.yml/badge.svg)
 
 _Get started using GitHub Copilot in less than an hour._
 
