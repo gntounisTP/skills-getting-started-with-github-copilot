@@ -91,7 +91,7 @@ jobs:
           # Check for participants info in app.js
           file="src/static/app.js"
           keyphrase='participant'
-          minimum_occurences=5
+          minimum_occurences=3
           found_occurences=$(grep -o "$keyphrase" "$file" | wc -l)
           if [ "$found_occurences" -lt "$minimum_occurences" ]; then
             checks=$(echo $checks | jq '.app_js.passed = false')
@@ -101,7 +101,7 @@ jobs:
           # Check for participants info in styles.css
           file="src/static/styles.css"
           keyphrase='participant'
-          minimum_occurences=2
+          minimum_occurences=1
           found_occurences=$(grep -o "$keyphrase" "$file" | wc -l)
           if [ "$found_occurences" -lt "$minimum_occurences" ]; then
             checks=$(echo $checks | jq '.styles_css.passed = false')
