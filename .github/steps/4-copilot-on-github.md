@@ -4,7 +4,7 @@ Congratulations! You are finished with coding for this exercise (and VS Code). N
 
 #### Copilot Pull Request Summaries
 
-Typically, you would review your notes and commit messages then summarize them for your pull request description. This may take some time, especially if commit messages are inconsistent or code is not not documented well. Fortunately, Copilot can consider all changes in the pull request and provide the important highlights, and with references too!
+Typically, you would review your notes and commit messages then summarize them for your pull request description. This may take some time, especially if commit messages are inconsistent or code is not documented well. Fortunately, Copilot can consider all changes in the pull request and provide the important highlights, and with references too!
 
 > [!NOTE]  
 > This is a unavailable with the **Copilot Free** tier. [[docs]](https://docs.github.com/en/enterprise-cloud@latest/copilot/using-github-copilot/using-github-copilot-for-pull-requests/creating-a-pull-request-summary-with-github-copilot)
