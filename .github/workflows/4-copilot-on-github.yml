@@ -165,7 +165,7 @@ jobs:
 
       - name: Disable current workflow
         run: |
-          gh workflow disable "Step 4a"
+          gh workflow disable "Step 4"
           gh workflow disable "Step 4b"
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
