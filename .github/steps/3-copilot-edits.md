@@ -83,7 +83,7 @@ In our previous steps, we used features of Copilot that require more hands-on gu
 
 1. With our new feature complete, please **commit** and **push** the changes to GitHub.
 
-1. Wait a moment for Mona to check your work, provide feedback, and share the the final lesson. Almost done!
+1. Wait a moment for Mona to check your work, provide feedback, and share the final lesson. Almost done!
 
 <details>
 <summary>Having trouble? 🤷</summary><br/>
