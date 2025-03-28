@@ -85,7 +85,7 @@ Great work! Now that we are familiar with the app and we know it works, let's as
 
    > **Note:** This will avoid stopping the existing debug session that is hosting our web application service.
 
-1. Within the new terminal window, `right click` and select `Copilot` then `Terminal Inline Chat`. Alternately, you can use the keyboard shortcut `Ctrl + I` (windows) or `Cmd + I` (mac).
+1. Within the new terminal window use the keyboard shortcut `Ctrl + I` (windows) or `Cmd + I` (mac) to bring up **Copilot's Terminal Inline Chat**.
 
 1. Let's ask Copilot to help us remember a command we have forgotten: creating a branch and publishing it
 

@@ -84,9 +84,9 @@ In new project developments, it's often helpful to have some realistic looking f
 
 1. Near the top (about line 23), find the `activities` variable, where our example extracurricular activies are configured.
 
-1. Open Copilot inline chat by right-clicking on any of the related lines and selecting **Copilot** and **Editor Inline Chat**.
+1. Click on any of the related lines and bring up Copilot inline chat by using the keyboard command `Ctrl + I` (windows) or `Cmd + I` (mac).
 
-   > **Tip:** You can also use the keyboard command `Ctrl + I` (windows) or `Cmd + I` (mac).
+   > **Tip:** Another way to bring up Copilot inline chat is: `right click` on any of the selected lines -> `Copilot` -> `Editor Inline Chat`.
 
 1. Enter the following prompt text and press enter or the **Send and Dispatch** button.
 
