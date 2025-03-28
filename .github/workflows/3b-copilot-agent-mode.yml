@@ -35,27 +35,8 @@ jobs:
           COMMENT_BODY: ${{ github.event.comment.body }}
 
   find_exercise:
-    name: Find exercise by issue title
-    runs-on: ubuntu-latest
-
-    outputs:
-      issue-url: ${{ steps.get-issue-url.outputs.ISSUE_URL }}
-
-    steps:
-      - id: get-issue-url
-        run: |
-          # Get the issue url from the event or search for it.
-          if [ -n "${{ github.event.issue }}" ]; then
-            issue_url="${{ github.event.issue.html_url }}"
-          else
-            issue_url=$(gh issue list --repo $REPO --search "in:title Exercise:" --json url,title --jq '.[].url')
-          fi
-
-          # Save to output
-          echo "ISSUE_URL=$issue_url" >> $GITHUB_OUTPUT
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          REPO: ${{ github.repository }}
+    name: Find Exercise Issue
+    uses: skills/exercise-toolkit/.github/workflows/find-exercise-issue.yml@v0.1.0
 
   post_step_3b_content:
     name: Post step 3b content
