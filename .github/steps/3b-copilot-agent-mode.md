@@ -1,17 +1,7 @@
-### :keyboard: Bonus Activity - Preview of GitHub Copilot Agent Mode
+### :keyboard: Bonus Activity - GitHub Copilot Agent Mode
 
-Nice! You found this hidden bonus level! 🎮 👾
-
-If you have been keeping an eye on Github, you may have heard about **Agent** mode.
-It's a public preview feature for GitHub Copilot.
-
-But... it's only for _Insiders_! 😎🤫
-
-But... good news. Anyone can access the Insiders version if they know the tricks. Yay! 🧐🎉
-
-> [!IMPORTANT]
-> This activity is optional and ungraded.
-> Since the Insiders version is updated daily, please expect to see differences or have breaking changes.
+> [!NOTE]
+> This activity is optional and not graded.
 
 ### What is "Agent" Mode?
 
@@ -24,35 +14,9 @@ That's just a brief intro and there is much more to learn, but that's for a dedi
 
 Now, let's give **Agent** mode a try! 👩‍🚀
 
-### :keyboard: Activity: Switch to Insiders mode
-
-If you are not familiar with the Insiders program, please use the below steps to switch your VS Code to the **Insiders** version and your Copilot extension to the **Pre-release** version.
-
-> [!NOTE]
-> While switching you will may likely receive an error messages about extension incompatability. This will be resolved after both versions are changed.
-
-1. Ensure you are in a browser-based instance of VS Code (your Codespace).
-
-   > **Tip:** This allows switching to **Insiders** mode without installing another version on your local computer.
-
-1. In the bottom left, click the **Manage** icon and select the **Switch to Insiders Version...** option.
-
-   <img width="300" alt="image" src="https://github.com/user-attachments/assets/11580b67-9891-4aa9-9a7c-04aff1e7ef9c" />
-
-1. In the left navigation, select the **Extensions** tab.
-   Find the **GitHub Copilot** entry, click the **Manage** icon, and select **Switch to Pre-Release Version**.
-
-   <img width="300" alt="image" src="https://github.com/user-attachments/assets/39e1d9ae-ba50-4cd7-b6b6-eb51aa0a35aa" />
-
-   A greeen tag will be added in the top left to indicate the pre-release version.
-
-   <img width="160" alt="image" src="https://github.com/user-attachments/assets/21ee8307-0c6d-4e8e-965d-cfd729edfe4c" />
-
-### :keyboard: Activity: Test out Copilot Agent mode! 🧑‍🚀
+### :keyboard: Activity: Use Agent mode to add functional "unregister" buttons 
 
 Let's experiment with some more open-ended requests that will add more functionality to our web application. Remember, AI assistants often produce different results, even if the same prompt is provided. If you don't get the desired results, you can try other models or provided followup feedback to refine the results.
-
-1. Ensure you using **both** the insiders version of VS Code and the pre-release version of the GitHub Copilot extension.
 
 1. Open the **Copilot** side panel and use the dropdown menu to switch to **Agent** mode.
 
@@ -85,7 +49,7 @@ Let's experiment with some more open-ended requests that will add more functiona
 
 1. When Copilot is finished, inspect the results. If you like the results, press the **Keep** button. If not, try providing Copilot some feedback.
 
-### :keyboard: Activity: Test out Copilot Agent mode, _again_! 🧑‍🚀🚀
+### :keyboard: Activity: Use Agent mode to change the database! 🧑‍🚀
 
 Just for fun, let's try something even more difficult and open-ended to see what happens!
 
