@@ -1,10 +1,5 @@
 # Getting Started with GitHub Copilot
 
-![](../../actions/workflows/1-preparing.yml/badge.svg)
-![](../../actions/workflows/2-first-introduction.yml/badge.svg)
-![](../../actions/workflows/3-copilot-edits.yml/badge.svg)
-![](../../actions/workflows/4-copilot-on-github.yml/badge.svg)
-
 _Get started using GitHub Copilot in less than an hour._
 
 ## Welcome
@@ -26,35 +21,23 @@ In this exercise, you will:
 
 ### How to start this exercise
 
-1. Right-click **Copy Exercise** and open the link in a new tab.
+Simply copy the exercise to your account, then give your favorite Octocat (Mona) **about 20 seconds** to prepare the first lesson, then **refresh the page**.
 
-   <a id="copy-exercise" href="https://github.com/new?template_owner=skills&template_name=getting-started-with-github-copilot&owner=%40me&name=skills-getting-started-with-github-copilot&description=Exercise:+Get+started+using+GitHub+Copilot&visibility=public">
-      <img src="https://img.shields.io/badge/📠_Copy_Exercise-008000" height="25pt"/>
-   </a>
+[![](https://img.shields.io/badge/Copy%20Exercise-%E2%86%92-1f883d?style=for-the-badge&logo=github&labelColor=197935)](https://github.com/new?template_owner=skills&template_name=getting-started-with-github-copilot&owner=%40me&name=skills-getting-started-with-github-copilot&description=Exercise:+Get+started+using+GitHub+Copilot&visibility=public)
 
-2. In the new tab, most of the fields will automatically fill in for you.
+<details>
+<summary>Having trouble? 🤷</summary><br/>
 
-   - For owner, choose your personal account or an organization to host the repository.
-   - We recommend creating a public repository, as private repositories will use [Actions minutes](https://docs.github.com/en/billing/managing-billing-for-github-actions/about-billing-for-github-actions).
-   - Scroll down and click the **Create repository** button at the bottom of the form.
+When copying the exercise, we recommend the following settings:
 
-3. After your new repository is created, wait about 20 seconds for the exercise to be prepared and buttons updated. You will continue working from your copy of the exercise.
+- For owner, choose your personal account or an organization to host the repository.
 
-   - The **Copy Exercise** button will deactivate, changing to gray.
-   - The **Start Exercise** button will activate, changing to green.
-   - You will likely need to refresh the page.
+- We recommend creating a public repository, since private repositories will use Actions minutes.
+   
+If the exercise isn't ready in 20 seconds, please check the [Actions](../../actions) tab.
 
-4. Click **Start Exercise**. Follow the step-by-step instructions and feedback will be provided as you progress.
+- Check to see if a job is running. Sometimes it simply takes a bit longer.
 
-   <a id="start-exercise">
-      <img src="https://img.shields.io/badge/🚀_Start_Exercise-AAA" height="25pt"/>
-   </a>
+- If the page shows a failed job, please submit an issue. Nice, you found a bug! 🐛
 
-> [!IMPORTANT]
-> The **Start Exercise** button will activate after copying the repository. You will probably need to refresh the page.
-
----
-
-Get help: [Post in our discussion board](https://github.com/orgs/skills/discussions/categories/getting-started-with-github-copilot) &bull; [Review the GitHub status page](https://www.githubstatus.com/)
-
-&copy; 2025 GitHub &bull; [Code of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md) &bull; [MIT License](https://gh.io/mit)
+</details>
