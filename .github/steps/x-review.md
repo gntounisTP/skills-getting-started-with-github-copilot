@@ -19,7 +19,8 @@ Here's a recap of your accomplishments:
   - Use Copilot to generate tests and documentation.
   - Use Copilot with different models.
 - Check out the other [GitHub Skills exercises](https://skills.github.com).
-- Try building your first [GitHub Copilot Extension](https://github.com/skills/your-first-extension-for-github-copilot)
+  - Learn how to [Integrate MCP with Copilot](https://github.com/skills/integrate-mcp-with-copilot)
+  - Try building your first [GitHub Copilot Extension](https://github.com/skills/your-first-extension-for-github-copilot)
 
 Check out these resources to learn more about GitHub Copilot :
 
