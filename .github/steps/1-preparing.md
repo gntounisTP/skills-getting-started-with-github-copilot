@@ -17,8 +17,8 @@ GitHub Copilot has been proven to increase developer productivity and accelerate
 Your most common interactions will likely be:
 
 - **Inline suggestions**: As you type, Copilot uses the nearby context to suggest code directly in your editor. This will be a familiar interaction if you have used code completion tools like [Intellisense](https://code.visualstudio.com/docs/editor/intellisense), except that the completions may be entire functions.
-- **Copilot Chat**: A dedicated chat panel that lets you ask coding related questions. This will feel familiar if you have used online AI assistant chats. The big difference however, is that your project files will provide automatic context to provide tailored responses.
-- **Copilot Edits**: Similar to Copilot Chat, but less conversational and more big picture or goal oriented.
+- **Copilot - Ask Mode**: A dedicated chat panel that lets you ask coding related questions. This will feel familiar if you have used online AI assistant chats. The big difference however, is that your project files will provide automatic context to provide tailored responses.
+- **Copilot - Edit Mode**: Similar to Copilot Chat, but less conversational. Copilot will make changes to your files to implement your request.
 
 > [!TIP]
 > You can learn more about current and upcoming features in the [GitHub Copilot Features](https://docs.github.com/en/copilot/about-github-copilot/github-copilot-features) documentation. You can also select different [models](https://docs.github.com/en/github-models) and make your own [extensions](https://github.com/features/copilot/extensions), but that's for a different lesson!
@@ -52,11 +52,11 @@ Let's start up our development environment, use copilot to learn a bit about the
 
    <img width="150" alt="image" src="https://github.com/user-attachments/assets/5e64db46-95cb-415d-badc-b6b8677f10c1" />
 
-1. If this is your first, time using GitHub Copilot, you will have to accept the usage terms to continue.
+1. If this is your first time using GitHub Copilot, you will need to accept the usage terms to continue.
 
 1. Enter the below prompt to ask Copilot to introduce you to the project.
 
-   > <img width="13px" src="https://github.com/user-attachments/assets/98fd5d2e-ea29-4a4a-9212-c7050e177a69" /> **Prompt**
+   > ![Static Badge](https://img.shields.io/badge/-Prompt-text?style=social&logo=github%20copilot)
    >
    > ```prompt
    > @workspace Please briefly explain the structure of this project.
@@ -92,9 +92,9 @@ Great work! Now that we are familiar with the app and we know it works, let's as
 
 1. Within the new terminal window use the keyboard shortcut `Ctrl + I` (windows) or `Cmd + I` (mac) to bring up **Copilot's Terminal Inline Chat**.
 
-1. Let's ask Copilot to help us remember a command we have forgotten: creating a branch and publishing it
+1. Let's ask Copilot to help us remember a command we have forgotten: creating a branch and publishing it.
 
-   > <img width="13px" src="https://github.com/user-attachments/assets/98fd5d2e-ea29-4a4a-9212-c7050e177a69" /> **Prompt**
+   > ![Static Badge](https://img.shields.io/badge/-Prompt-text?style=social&logo=github%20copilot)
    >
    > ```prompt
    > Hey copilot, how can I create and publish a new Git branch?
@@ -109,7 +109,7 @@ Great work! Now that we are familiar with the app and we know it works, let's as
    git push -u origin {new_branch_name}
    ```
 
-   > <img width="13px" src="https://github.com/user-attachments/assets/98fd5d2e-ea29-4a4a-9212-c7050e177a69" /> **Prompt**
+   > ![Static Badge](https://img.shields.io/badge/-Prompt-text?style=social&logo=github%20copilot)
    >
    > ```prompt
    > Awesome! Thanks, Copilot! Let's use the

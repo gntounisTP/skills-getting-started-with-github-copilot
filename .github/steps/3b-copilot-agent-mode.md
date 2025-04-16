@@ -18,13 +18,13 @@ Now, let's give **Agent** mode a try! 👩‍🚀
 
 Let's experiment with some more open-ended requests that will add more functionality to our web application. Remember, AI assistants often produce different results, even if the same prompt is provided. If you don't get the desired results, you can try other models or provided followup feedback to refine the results.
 
-1. Open the **Copilot** side panel and use the dropdown menu to switch to **Agent** mode.
+1. Open the **Copilot** chat panel and use the dropdown menu to switch to **Agent** mode.
 
-   <img width="250" alt="image" src="https://github.com/user-attachments/assets/201e08ab-14a0-48bf-824e-ba4f8f43f8ab" />
+   <img width="250" alt="image" src="https://github.com/user-attachments/assets/8c537e2a-d89a-4908-8d35-77c7f0830805" />
 
 1. Time for our test! Let's ask Copilot to add functionality for removing participants.
 
-   > <img width="13px" src="https://github.com/user-attachments/assets/98fd5d2e-ea29-4a4a-9212-c7050e177a69" /> **Prompt**
+   > ![Static Badge](https://img.shields.io/badge/-Prompt-text?style=social&logo=github%20copilot)
    >
    > ```prompt
    > #codebase Please add a delete icon next to each participant and hide the bullet points.
@@ -38,7 +38,7 @@ Let's experiment with some more open-ended requests that will add more functiona
 
 1. Ask Copilot to fix a registration bug.
 
-   > <img width="13px" src="https://github.com/user-attachments/assets/98fd5d2e-ea29-4a4a-9212-c7050e177a69" /> **Prompt**
+   > ![Static Badge](https://img.shields.io/badge/-Prompt-text?style=social&logo=github%20copilot)
    >
    > ```prompt
    > #codebase I've noticed there seems to be a bug.
@@ -63,7 +63,7 @@ Just for fun, let's try something even more difficult and open-ended to see what
 
 1. Ask Copilot to install a local database service.
 
-   > <img width="13px" src="https://github.com/user-attachments/assets/98fd5d2e-ea29-4a4a-9212-c7050e177a69" /> **Prompt**
+   > ![Static Badge](https://img.shields.io/badge/-Prompt-text?style=social&logo=github%20copilot)
    >
    > ```prompt
    > Please install a local mongodb server for development reasons.
@@ -76,7 +76,7 @@ Just for fun, let's try something even more difficult and open-ended to see what
 
 1. Ask Copilot to change our app to use the database service. 🤯
 
-   > <img width="13px" src="https://github.com/user-attachments/assets/98fd5d2e-ea29-4a4a-9212-c7050e177a69" /> **Prompt**
+   > ![Static Badge](https://img.shields.io/badge/-Prompt-text?style=social&logo=github%20copilot)
    >
    > ```prompt
    > #codebase I don't like that we are storing the data in memory.

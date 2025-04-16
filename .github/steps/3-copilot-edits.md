@@ -2,7 +2,7 @@
 
 In our previous steps, we used features of Copilot that require more hands-on guidance and they produced mostly localized results. Now, we will explore Copilot Edits, a feature that allows working more holistically on our repo.
 
-[Copilot Edits](https://code.visualstudio.com/docs/copilot/copilot-edits) is an AI-powered code editing session to make changes across **multiple files** using **natural language**, and applies the edits directly in the editor, where you can review them in-place, with the full context of the surrounding code.
+[Copilot - Edit Mode](https://code.visualstudio.com/docs/copilot/copilot-edits) is an AI-powered code editing session to make changes across **multiple files** using **natural language**, and applies the edits directly in the editor, where you can review them in-place, with the full context of the surrounding code.
 
 #### Key features
 
@@ -23,9 +23,9 @@ In our previous steps, we used features of Copilot that require more hands-on gu
 
 1. If the Copilot Chat panel is not visible, please reopen it.
 
-1. In the top left part of Copilot Chat window, click the **Copilot Edits** icon to switch modes.
+1. At the bottom of Copilot Chat window, use the dropdown to switch to **Edit** mode.
 
-   <img width="200" alt="image" src="https://github.com/user-attachments/assets/0b17c5bd-d03b-41b1-b97d-624fcbf8ccd1" />
+   <img width="350" alt="image" src="https://github.com/user-attachments/assets/646fc94a-7d60-4821-b9cf-9ec6f4fd03d7" />
 
 1. Open the files related to our webpage then drag each editor window (or file) to the chat panel, informing Copilot to use them as context.
 
@@ -33,11 +33,11 @@ In our previous steps, we used features of Copilot that require more hands-on gu
    - `src/static/index.html`
    - `src/static/styles.css`
 
-   > **Tip:** You can also use the **Attach files...** button to provide other sources of context items, like a GitHub issue, the entire codebase, or the results of a terminal window.
+   > **Tip:** You can also use the **Add Context...** button to provide other sources of context items, like a GitHub issue, the entire codebase, or the results of a terminal window.
 
 1. Ask Copilot to update our project to display the current participants of activities. Wait a moment for the edit suggestions to arrive and be applied.
 
-   > <img width="13px" src="https://github.com/user-attachments/assets/98fd5d2e-ea29-4a4a-9212-c7050e177a69" /> **Prompt**
+   > ![Static Badge](https://img.shields.io/badge/-Prompt-text?style=social&logo=github%20copilot)
    >
    > ```prompt
    > Hey Copilot, can you please edit the activity cards to add a participants section.
