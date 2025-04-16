@@ -85,6 +85,12 @@ In our previous steps, we used features of Copilot that require more hands-on gu
 
 1. Wait a moment for Mona to check your work, provide feedback, and share the final lesson. Almost done!
 
+1. (optional) If you would like an ungraded bonus step to briefly introduce Agent mode, **add an issue comment** asking **@professortocat** about Copilot Agent mode. 🚀
+
+   ```txt
+   Hey @professortocat, Agent mode sounds pretty cool. Can you please tell me more about it?
+   ```
+
 <details>
 <summary>Having trouble? 🤷</summary><br/>
 
@@ -92,12 +98,5 @@ If you don't get feedback, here are some things to check:
 
 - Make sure your commit the changes in the `src/static/` directory to the branch `accelerate-with-copilot` and pushed/synchronized to GitHub.
 - If Mona found a mistake, simply make a correction and push your changes again. Mona will check your work as many times as needed.
-
-</details>
-
-<details>
-<summary>Bonus content? 🧐</summary><br/>
-
-> **Insider Tip:** Try adding an issue comment asking @professortocat about Copilot Agent mode. 😉
 
 </details>
