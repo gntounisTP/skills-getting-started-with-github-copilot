@@ -10,13 +10,16 @@ But before we do that, let's learn a bit more about Copilot! 🧑‍🚀
 
 ### How does Copilot work?
 
-In short, you can think of Copilot like a very focused coworker. To be effective with them, you need to provide them background (context) and clear direction (prompts). Additionally, different people are better at different things because of their unique experiences (models).
+In short, you can think of Copilot like a very specialized coworker. To be effective with them, you need to provide them background (context) and clear direction (prompts). Additionally, different people are better at different things because of their unique experiences (models).
 
 - **How do we provide context?:** In our coding environment, Copilot will automatically consider nearby code and open tabs. If you are using chat, you can also explicitly refer to files.
 
 - **What model should we pick?:** For our exercise, it shouldn't matter too much. Experimenting with different models is part of the fun! That's another lesson! 🤖
 
 - **How do I make prompts?:** Being explicit and clear helps Copilot do the best job. But unlike some traditional systems, you can always clarify your direction with followup prompts.
+
+> [!TIP]
+> There several other ways to supplement Copilot's knowledge and capabilities like [chat participants](https://docs.github.com/en/copilot/using-github-copilot/copilot-chat/github-copilot-chat-cheat-sheet?tool=vscode#chat-participants), [chat variables](https://docs.github.com/en/copilot/using-github-copilot/copilot-chat/github-copilot-chat-cheat-sheet?tool=vscode#chat-variables), [slash commands](https://docs.github.com/en/copilot/using-github-copilot/copilot-chat/github-copilot-chat-cheat-sheet?tool=vscode#slash-commands-1), and [MCP tools](https://code.visualstudio.com/docs/copilot/chat/mcp-servers).
 
 ### :keyboard: Activity: Use Copilot to fix our registration bug :bug:
 
@@ -28,6 +31,13 @@ In short, you can think of Copilot like a very focused coworker. To be effective
    > @workspace Students are able to register twice for an activity.
    > Where could this bug be coming from?
    > ```
+
+   <details>
+   <summary>What is @workspace?</summary>
+
+   Great question! This is a specialized [chat participant](https://docs.github.com/en/copilot/using-github-copilot/copilot-chat/github-copilot-chat-cheat-sheet?tool=vscode#chat-participants) that will explore the project repository and try to include relevant additional context.
+
+   </details>
 
 1. Now that we know the issue is in the `src/app.py` file and the `signup_for_activity` method, let's follow Copilot's recommendation and go fix it (semi-manually). We'll start with a comment and let Copilot finish the correction.
 
@@ -82,7 +92,7 @@ In new project developments, it's often helpful to have some realistic looking f
 
 1. If not already open, open the `src/app.py` file.
 
-1. Near the top (about line 23), find the `activities` variable, where our example extracurricular activies are configured.
+1. Near the top (about line 23), find the `activities` variable, where our example extracurricular activities are configured.
 
 1. Click on any of the related lines and bring up Copilot inline chat by using the keyboard command `Ctrl + I` (windows) or `Cmd + I` (mac).
 
@@ -99,72 +109,72 @@ In new project developments, it's often helpful to have some realistic looking f
 
 1. After a moment, Copilot will directly start making changes to the code. The changes will be stylized differently to make any additions and removals easy to identify. Take a moment to inspect and then press the **Accept** button.
 
-<details>
-<summary>Example Results</summary><br/>
+   <details>
+   <summary>Example Results</summary><br/>
 
-Copilot is growing every day and may not always produce the same results. If you are unhappy with the suggestions, here is an example result we produced during the making of this exercise. You can use it to continue forward, if having trouble.
+   Copilot is growing every day and may not always produce the same results. If you are unhappy with the suggestions, here is an example result we produced during the making of this exercise. You can use it to continue forward, if having trouble.
 
-```python
-# In-memory activity database
-activities = {
-   "Chess Club": {
-      "description": "Learn strategies and compete in chess tournaments",
-      "schedule": "Fridays, 3:30 PM - 5:00 PM",
-      "max_participants": 12,
-      "participants": ["michael@mergington.edu", "daniel@mergington.edu"]
-   },
-   "Programming Class": {
-      "description": "Learn programming fundamentals and build software projects",
-      "schedule": "Tuesdays and Thursdays, 3:30 PM - 4:30 PM",
-      "max_participants": 20,
-      "participants": ["emma@mergington.edu", "sophia@mergington.edu"]
-   },
-   "Gym Class": {
-      "description": "Physical education and sports activities",
-      "schedule": "Mondays, Wednesdays, Fridays, 2:00 PM - 3:00 PM",
-      "max_participants": 30,
-      "participants": ["john@mergington.edu", "olivia@mergington.edu"]
-   },
-   "Basketball Team": {
-      "description": "Competitive basketball training and games",
-      "schedule": "Tuesdays and Thursdays, 4:00 PM - 6:00 PM",
-      "max_participants": 15,
-      "participants": []
-   },
-   "Swimming Club": {
-      "description": "Swimming training and water sports",
-      "schedule": "Mondays and Wednesdays, 3:30 PM - 5:00 PM",
-      "max_participants": 20,
-      "participants": []
-   },
-   "Art Studio": {
-      "description": "Express creativity through painting and drawing",
-      "schedule": "Wednesdays, 3:30 PM - 5:00 PM",
-      "max_participants": 15,
-      "participants": []
-   },
-   "Drama Club": {
-      "description": "Theater arts and performance training",
-      "schedule": "Tuesdays, 4:00 PM - 6:00 PM",
-      "max_participants": 25,
-      "participants": []
-   },
-   "Debate Team": {
-      "description": "Learn public speaking and argumentation skills",
-      "schedule": "Thursdays, 3:30 PM - 5:00 PM",
-      "max_participants": 16,
-      "participants": []
-   },
-   "Science Club": {
-      "description": "Hands-on experiments and scientific exploration",
-      "schedule": "Fridays, 3:30 PM - 5:00 PM",
-      "max_participants": 20,
-      "participants": []
+   ```python
+   # In-memory activity database
+   activities = {
+      "Chess Club": {
+         "description": "Learn strategies and compete in chess tournaments",
+         "schedule": "Fridays, 3:30 PM - 5:00 PM",
+         "max_participants": 12,
+         "participants": ["michael@mergington.edu", "daniel@mergington.edu"]
+      },
+      "Programming Class": {
+         "description": "Learn programming fundamentals and build software projects",
+         "schedule": "Tuesdays and Thursdays, 3:30 PM - 4:30 PM",
+         "max_participants": 20,
+         "participants": ["emma@mergington.edu", "sophia@mergington.edu"]
+      },
+      "Gym Class": {
+         "description": "Physical education and sports activities",
+         "schedule": "Mondays, Wednesdays, Fridays, 2:00 PM - 3:00 PM",
+         "max_participants": 30,
+         "participants": ["john@mergington.edu", "olivia@mergington.edu"]
+      },
+      "Basketball Team": {
+         "description": "Competitive basketball training and games",
+         "schedule": "Tuesdays and Thursdays, 4:00 PM - 6:00 PM",
+         "max_participants": 15,
+         "participants": []
+      },
+      "Swimming Club": {
+         "description": "Swimming training and water sports",
+         "schedule": "Mondays and Wednesdays, 3:30 PM - 5:00 PM",
+         "max_participants": 20,
+         "participants": []
+      },
+      "Art Studio": {
+         "description": "Express creativity through painting and drawing",
+         "schedule": "Wednesdays, 3:30 PM - 5:00 PM",
+         "max_participants": 15,
+         "participants": []
+      },
+      "Drama Club": {
+         "description": "Theater arts and performance training",
+         "schedule": "Tuesdays, 4:00 PM - 6:00 PM",
+         "max_participants": 25,
+         "participants": []
+      },
+      "Debate Team": {
+         "description": "Learn public speaking and argumentation skills",
+         "schedule": "Thursdays, 3:30 PM - 5:00 PM",
+         "max_participants": 16,
+         "participants": []
+      },
+      "Science Club": {
+         "description": "Hands-on experiments and scientific exploration",
+         "schedule": "Fridays, 3:30 PM - 5:00 PM",
+         "max_participants": 20,
+         "participants": []
+      }
    }
-}
-```
+   ```
 
-</details>
+   </details>
 
 ### :keyboard: Activity: Use Copilot to describe our work 💬
 

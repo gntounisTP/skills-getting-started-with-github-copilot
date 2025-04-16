@@ -90,7 +90,7 @@ In our previous steps, we used features of Copilot that require more hands-on gu
 
 If you don't get feedback, here are some things to check:
 
-- Make sure your commite the changes in the `src/static/` directory to the branch `accelerate-with-copilot` and pushed/synchronized to GitHub.
+- Make sure your commit the changes in the `src/static/` directory to the branch `accelerate-with-copilot` and pushed/synchronized to GitHub.
 - If Mona found a mistake, simply make a correction and push your changes again. Mona will check your work as many times as needed.
 
 </details>

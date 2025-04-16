@@ -14,7 +14,7 @@ That's just a brief intro and there is much more to learn, but that's for a dedi
 
 Now, let's give **Agent** mode a try! 👩‍🚀
 
-### :keyboard: Activity: Use Agent mode to add functional "unregister" buttons 
+### :keyboard: Activity: Use Agent mode to add functional "unregister" buttons
 
 Let's experiment with some more open-ended requests that will add more functionality to our web application. Remember, AI assistants often produce different results, even if the same prompt is provided. If you don't get the desired results, you can try other models or provided followup feedback to refine the results.
 
@@ -31,7 +31,7 @@ Let's experiment with some more open-ended requests that will add more functiona
    > When clicked, it will unregister that participant from the activity.
    > ```
 
-   - If you try this prompt in **Edit** mode, you will propbably find that the changes to the frontend and backend were made in a theoretical way. Although no syntax or runtime errors occurred, the changes were not compatible and didn't achieve the goal.
+   - If you try this prompt in **Edit** mode, you will probably find that the changes to the frontend and backend were made in a theoretical way. Although no syntax or runtime errors occurred, the changes were not compatible and didn't achieve the goal.
    - In **Agent** mode, Copilot reviewed its own work and refined it to ensure all changes were error free and coordinated together.
 
 1. When Copilot is finished, restart the debugger and inspect the results. If you like the results, press the **Keep** button. If not, try providing Copilot some feedback to refined the results.
@@ -71,7 +71,7 @@ Just for fun, let's try something even more difficult and open-ended to see what
    > Do not modify our program yet.
    > ```
 
-   - We purposly made the default development environment not ready for installing a local MongoDB server.
+   - We purposely made the default development environment not ready for installing a local MongoDB server.
    - You will see Copilot make mistakes, analyze the error messages, and ask to run various extra commands to make the environment suitable. Nice!
 
 1. Ask Copilot to change our app to use the database service. 🤯
@@ -82,7 +82,7 @@ Just for fun, let's try something even more difficult and open-ended to see what
    > #codebase I don't like that we are storing the data in memory.
    > Let's switch to using mongodb.
    > For now use the local development instance.
-   > Please prepopulate the database with the existing hardcoded json activities, keeping the activity name as the key.
+   > Please pre-populate the database with the existing hardcoded json activities, keeping the activity name as the key.
    > ```
 
 1. That's your preview for now. We hope it was fun and please check back soon on the [Skills page](https://skills.github.com) for a dedicated exercise to explore even more of Agent Mode! 🧑‍🚀 🚀

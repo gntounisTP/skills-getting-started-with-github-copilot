@@ -25,7 +25,7 @@ Your most common interactions will likely be:
 
 ### How can I use GitHub Copilot?
 
-As you work, you'll find GitHub Copilot can help out in several places across the website and in your favorite coding environments such as VS Code, Jet Brains, and Xcode! For today's coding though, we will practice with VS Code in a preconfigured development environment known as [Codespace](https://github.com/features/codespaces).
+As you work, you'll find GitHub Copilot can help out in several places across the website and in your favorite coding environments such as VS Code, Jet Brains, and Xcode! For today's coding though, we will practice with VS Code in a pre-configured development environment known as [Codespace](https://github.com/features/codespaces).
 
 ### :keyboard: Activity: Get a project intro from Copilot Chat
 
@@ -63,7 +63,12 @@ Let's start up our development environment, use copilot to learn a bit about the
    > What should I do to run it?
    > ```
 
-   > **Note**: It is not necesesary to follow Copilot's recommended instructions. We have already prepared the environment for you.
+   > **Note**: It is not necessary to follow Copilot's recommended instructions. We have already prepared the environment for you.
+
+   <details>
+   <summary>What is @workspace?</summary>
+   Nice job noticing the details, but let's just use it for now. 🤓 We promise to explain in the next step.
+   </details>
 
 1. Now that we know a bit more about the project, let's actually try running it! In the left sidebar, select the `Run and Debug` tab and then press the **Start Debugging** icon.
 

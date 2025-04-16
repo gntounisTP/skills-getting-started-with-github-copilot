@@ -11,7 +11,7 @@ Typically, you would review your notes and commit messages then summarize them f
 
 #### Copilot Review
 
-More eyes on our work is always useful so let's ask Copilot to do a first pass before we do a normal peer review process. Copilot is great at catching common mistakes that can are fixed by simple adjustment, but please remember to use it responsibily.
+More eyes on our work is always useful so let's ask Copilot to do a first pass before we do a normal peer review process. Copilot is great at catching common mistakes that can are fixed by simple adjustment, but please remember to use it responsibly.
 
 > [!NOTE]  
 > This is in **Public Preview** for organizations. [[docs]](https://docs.github.com/en/copilot/using-github-copilot/code-review/using-copilot-code-review)
