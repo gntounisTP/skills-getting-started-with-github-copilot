@@ -2,6 +2,7 @@ name: Step 4b # Copilot on GitHub
 
 on:
   # Trigger if PR Description is edited
+  # Disabled because PR summaries are not available for free accounts
   # pull_request:
   #   branches:
   #     - main
@@ -21,7 +22,7 @@ permissions:
 jobs:
   find_exercise:
     name: Find Exercise Issue
-    uses: skills/exercise-toolkit/.github/workflows/find-exercise-issue.yml@v0.1.0
+    uses: skills/exercise-toolkit/.github/workflows/find-exercise-issue.yml@v0.4.0
 
   check_step_work:
     name: Check step work
@@ -37,81 +38,64 @@ jobs:
       - name: Get response templates
         uses: actions/checkout@v4
         with:
-          repository: skills/response-templates
-          path: skills-response-templates
+          repository: skills/exercise-toolkit
+          path: exercise-toolkit
+          ref: v0.4.0
 
       # START: Check practical exercise
 
-      - name: Check for pr description and copilot review
-        id: check-user-work
+      - name: Check for PR description
+        continue-on-error: true
+        id: check-pr-description
         run: |
-          # Checks to perform
-            checks='{
-              "pr_description": {
-                "name": "PR Description",
-                "passed": true,
-                "message": ""
-              },
-              "copilot_review": {
-                "name": "Copilot Review",
-                "passed": true,
-                "message": ""
-              }
-            }'
-
           # Check if PR has a description and minimum length
           min_length=15
           body_length=$(echo "$PR_Body" | wc -c)
-          echo "PR decription length: $body_length"
-          if [ "$body_length" -lt $min_length ]; then
-            checks=$(echo $checks | jq '.pr_description.passed = false')
-            checks=$(echo $checks | jq '.pr_description.message = "Please use Copilot to generate a pull request description."')
-          fi
+          echo "PR description length: $body_length"
 
+          if [ "$body_length" -lt $min_length ]; then
+            echo "::error::PR description is too short or missing"
+            exit 1
+          fi
+        env:
+          PR_Body: ${{ github.event.pull_request.body }}
+
+      - name: Check for Copilot review
+        id: check-copilot-review
+        run: |
           # Check for a PR Review from Copilot
           reviews=$(gh pr view --repo $REPO $PR_NUMBER --json reviews)
           authors=$(echo "$reviews" | jq '.reviews[].author.login')
+
           if echo "$authors" | grep -q "copilot-pull-request-reviewer"; then
-              echo "Copilot has reviewed this PR."
-            else
-              echo "Copilot has NOT reviewed this PR."
-              checks=$(echo $checks | jq '.copilot_review.passed = false')
-              checks=$(echo $checks | jq '.copilot_review.message = "Please request a review from Copilot."')
+            echo "Copilot has reviewed this PR."
+          else
+            echo "Copilot has NOT reviewed this PR."
+            echo "::error::No review from Copilot found"
+            exit 1
           fi
-
-          # Verify all checks passed
-          passed=$(echo $checks | jq '. | all(.passed?)')
-
-          # Flatten to an array for returning. Allows iteration during rendering.
-          results=$(echo $checks | jq 'to_entries | map({name: .key} + .value)')
-
-          # Save pass status to output
-          echo "passed=$passed" >> $GITHUB_OUTPUT
-
-          # Save results to output
-          echo 'results<<EOF' >> $GITHUB_OUTPUT
-          echo $results >> $GITHUB_OUTPUT
-          echo 'EOF' >> $GITHUB_OUTPUT
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          PR_Body: ${{ github.event.pull_request.body }}
           REPO: ${{ github.repository }}
           PR_NUMBER: ${{ github.event.pull_request.number }}
+        continue-on-error: true
 
       - name: Build message - step results
         id: build-message-step-results
-        uses: skills/action-text-variables@v1
+        uses: skills/action-text-variables@v2
         with:
-          template-file: skills-response-templates/step-feedback/step-results.md
-          template-vars: '{
-            "step_number": 4,
-            "passed": ${{ steps.check-user-work.outputs.passed }},
-            "results_table": ${{ steps.check-user-work.outputs.results }},
-            "tips": [
-            "Copilot review will also suggest changes for common mistakes and typos.",
-            "You can use repository rulesets to automatically require a review from Copilot."
-            ]
-            }'
+          template-file: exercise-toolkit/markdown-templates/step-feedback/step-results-table.md
+          template-vars: |
+            step_number: 4
+            passed: ${{ !contains(steps.*.outcome, 'failure') }}
+            results_table:
+              - description: "Pull request contains a descriptive overview"
+                passed: ${{ steps.check-pr-description.outcome == 'success' }}
+              - description: "Pull request received a review from GitHub Copilot"
+                passed: ${{ steps.check-copilot-review.outcome == 'success' }}
+            tips:
+              - "If you already requested Copilot review and this check did not pass, go to your repository [actions](https://github.com/${{github.repository}}/actions) tab to check if a workflow run is awaiting your manual approval."
+              - "You can use repository rulesets to automatically require a review from Copilot."
 
       - name: Create comment - step results
         run: |
@@ -122,7 +106,7 @@ jobs:
           COMMENT_BODY: ${{ steps.build-message-step-results.outputs.updated-text }}
 
       - name: Fail job if not all checks passed
-        if: steps.check-user-work.outputs.passed == 'false'
+        if: contains(steps.*.outcome, 'failure')
         run: exit 1
 
       # END: Check practical exercise
