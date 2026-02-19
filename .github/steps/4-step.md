@@ -6,7 +6,7 @@ Now let's slow down for one round and work like architects: define a strong test
 
 ### 📖 Theory: What is Copilot Plan Agent?
 
-Copilot [Plan Agent](https://code.visualstudio.com/docs/copilot/agents/planning) helps you design a solution before any code is changed.
+Copilot [Plan Agent](https://code.visualstudio.com/docs/copilot/chat/chat-planning) helps you design a solution before any code is changed.
 
 Instead of jumping straight into edits, it researches your request, asks clarifying questions, and drafts an implementation plan you can refine.
 
@@ -30,7 +30,7 @@ Your backend still has zero test coverage. Use **Plan Agent** to create a plan, 
 
 1. Open the **Copilot Chat** panel and switch to **Plan Agent**.
 
-   <img width="350" alt="image" src="https://github.com/gntounisTP/skills-getting-started-with-github-copilot/blob/main/.github/images/plan-mode-dropdown.png?raw=true" />
+   <img width="350" alt="image" src="../images/plan-mode-dropdown.png" />
 
 
 1. Let's start with a broad prompt and Copilot will help us fill in the details:
@@ -64,7 +64,7 @@ Your backend still has zero test coverage. Use **Plan Agent** to create a plan, 
 
 1. Review the proposed plan and when you are happy with it, click **Start implementation** to hand off to **Agent Mode**.
 
-   <img width="350" alt="image" src="https://github.com/gntounisTP/skills-getting-started-with-github-copilot/blob/main/.github/images/plan-mode-start-implementation.png?raw=true" />
+   <img width="350" alt="image" src="../images/plan-mode-start-implementation.png" />
 
    Notice that clicking the button switched from **Plan** to **Agent Mode**. From this point on, Copilot can edit your codebase, just like before.
 
