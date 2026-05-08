@@ -88,6 +88,10 @@ section h3 {
   background: linear-gradient(180deg, #f6f8ff 0%, #eef3ff 100%);
 }
 
+.participant-info {
+  position: relative;
+}
+
 .participants-title {
   margin-bottom: 8px;
   font-weight: bold;

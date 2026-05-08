@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 const safeActivity = escapeHtml(name);
 
                 return `
-                  <li class="participant-item">
+                  <li class="participant-item participant-info">
                     <span class="participant-email">${safeParticipant}</span>
                     <button
                       type="button"
@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
           <p>${details.description}</p>
           <p><strong>Schedule:</strong> ${details.schedule}</p>
           <p><strong>Availability:</strong> ${spotsLeft} spots left</p>
-          <div class="participants-section">
+          <div class="participants-section participant-info">
             <p class="participants-title">Participants (${details.participants.length})</p>
             <ul class="participants-list">
               ${participantsList}
