@@ -43,7 +43,8 @@ document.addEventListener("DOMContentLoaded", () => {
           participantsListHtml = details.participants
             .map((participant) => {
               const safeParticipant = escapeHtml(participant);
-              return `<li class="participant-item"><span class="participant-email">${safeParticipant}</span></li>`;
+              const safeActivity = escapeHtml(name);
+              return `<li class="participant-item"><span class="participant-email">${safeParticipant}</span><button class="delete-participant-btn" title="Unregister participant" data-activity="${safeActivity}" data-email="${safeParticipant}"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#e53935" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button></li>`;
             })
             .join("");
         } else {
@@ -57,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
           <p><strong>Availability:</strong> ${spotsLeft} spots left</p>
           <div class="participants-section">
             <p class="participants-title">Participants <span class="participants-count">(${details.participants.length})</span></p>
-            <ul class="participants-list">
+            <ul class="participants-list no-bullets">
               ${participantsListHtml}
             </ul>
           </div>

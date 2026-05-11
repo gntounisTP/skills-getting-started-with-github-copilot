@@ -101,8 +101,12 @@ section h3 {
 .participants-list {
   margin: 0;
   padding-left: 0;
-  list-style: none;
   color: #263238;
+}
+
+.no-bullets {
+  list-style: none;
+  padding-left: 0;
 }
 
 .participants-list li {
