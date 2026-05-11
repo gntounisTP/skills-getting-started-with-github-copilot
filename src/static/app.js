@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const spotsLeft = details.max_participants - details.participants.length;
 
-        // Builds participants list as a pretty bulleted list
+        // Build participants list as a pretty bulleted list
         // Minimal, clear participants section for debugging
         let participantsListHtml = '';
         if (Array.isArray(details.participants) && details.participants.length > 0) {
