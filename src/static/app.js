@@ -36,42 +36,29 @@ document.addEventListener("DOMContentLoaded", () => {
         activityCard.className = "activity-card";
 
         const spotsLeft = details.max_participants - details.participants.length;
-        const participantsList = details.participants.length
-          ? details.participants
-              .map((participant) => {
-                const safeParticipant = escapeHtml(participant);
-                const safeActivity = escapeHtml(name);
 
-                return `
-                  <li class="participant-item participant-info">
-                    <span class="participant-email">${safeParticipant}</span>
-                    <button
-                      type="button"
-                      class="delete-participant-btn"
-                      data-activity="${safeActivity}"
-                      data-email="${safeParticipant}"
-                      aria-label="Unregister ${safeParticipant} from ${safeActivity}"
-                      title="Unregister participant"
-                    >
-                      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                        <path d="M9 3h6l1 2h4v2H4V5h4l1-2zm1 6h2v9h-2V9zm4 0h2v9h-2V9zM7 9h2v9H7V9z"/>
-                      </svg>
-                    </button>
-                  </li>
-                `;
-              })
-              .join("")
-          : '<li class="no-participants">No participants yet</li>';
+        // Build participants list as a pretty bulleted list
+        let participantsListHtml = "";
+        if (details.participants.length) {
+          participantsListHtml = details.participants
+            .map((participant) => {
+              const safeParticipant = escapeHtml(participant);
+              return `<li class="participant-item"><span class="participant-email">${safeParticipant}</span></li>`;
+            })
+            .join("");
+        } else {
+          participantsListHtml = '<li class="no-participants">No participants yet</li>';
+        }
 
         activityCard.innerHTML = `
-          <h4>${name}</h4>
-          <p>${details.description}</p>
-          <p><strong>Schedule:</strong> ${details.schedule}</p>
+          <h4>${escapeHtml(name)}</h4>
+          <p>${escapeHtml(details.description)}</p>
+          <p><strong>Schedule:</strong> ${escapeHtml(details.schedule)}</p>
           <p><strong>Availability:</strong> ${spotsLeft} spots left</p>
-          <div class="participants-section participant-info">
-            <p class="participants-title">Participants (${details.participants.length})</p>
+          <div class="participants-section">
+            <p class="participants-title">Participants <span class="participants-count">(${details.participants.length})</span></p>
             <ul class="participants-list">
-              ${participantsList}
+              ${participantsListHtml}
             </ul>
           </div>
         `;
