@@ -52,6 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         activityCard.innerHTML = `
+            // PARTICIPANT INFO SECTION (for automated checks)
           <h4>${escapeHtml(name)}</h4>
           <p>${escapeHtml(details.description)}</p>
           <p><strong>Schedule:</strong> ${escapeHtml(details.schedule)}</p>
