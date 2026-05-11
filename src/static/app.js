@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
           <p><strong>Schedule:</strong> ${escapeHtml(details.schedule)}</p>
           <p><strong>Availability:</strong> ${spotsLeft} spots left</p>
           <div class="participants-section">
-            <p class="participants-title">Participants</p>
+            <p class="participants-title">Participants:</p>
             <ul class="participants-list no-bullets">
               ${participantsListHtml}
             </ul>
