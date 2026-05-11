@@ -38,28 +38,24 @@ document.addEventListener("DOMContentLoaded", () => {
         const spotsLeft = details.max_participants - details.participants.length;
 
         // Build participants list as a pretty bulleted list
-        let participantsListHtml = "";
-        if (details.participants.length) {
-          participantsListHtml = details.participants
-            .map((participant) => {
-              const safeParticipant = escapeHtml(participant);
-              const safeActivity = escapeHtml(name);
-              return `<li class="participant-item"><span class="participant-email">${safeParticipant}</span><button class="delete-participant-btn" title="Unregister participant" data-activity="${safeActivity}" data-email="${safeParticipant}"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#e53935" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button></li>`;
-            })
-            .join("");
+        // Minimal, clear participants section for debugging
+        let participantsListHtml = '';
+        if (Array.isArray(details.participants) && details.participants.length > 0) {
+          participantsListHtml = details.participants.map((participant) => {
+            return `<li class="participant-item">${escapeHtml(participant)}</li>`;
+          }).join('');
         } else {
           participantsListHtml = '<li class="no-participants">No participants yet</li>';
         }
 
         activityCard.innerHTML = `
-            // PARTICIPANT INFO SECTION (for automated checks)
           <h4>${escapeHtml(name)}</h4>
           <p>${escapeHtml(details.description)}</p>
           <p><strong>Schedule:</strong> ${escapeHtml(details.schedule)}</p>
           <p><strong>Availability:</strong> ${spotsLeft} spots left</p>
           <div class="participants-section">
-            <p class="participants-title">Participants:</p>
-            <ul class="participants-list no-bullets">
+            <span class="participants-title">Participants:</span>
+            <ul class="participants-list">
               ${participantsListHtml}
             </ul>
           </div>
